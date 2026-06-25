@@ -19,6 +19,7 @@ dependencies = [
     "couchdb>=1.2",
     "loguru>=0.7.2",
     "wecom-notifier>=0.2.0",
+    "zlx-ops-sdk @ git+https://github.com/zj1123581321/zlx-ops-sdk.git@main",
 ]
 
 [project.optional-dependencies]
