@@ -7,6 +7,7 @@ Obsidian Clip API 主入口模块
 import time
 from contextlib import asynccontextmanager
 from datetime import datetime, timezone, timedelta
+import zlx_ops_sdk
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from .api.routes import router
@@ -22,6 +23,8 @@ setup_logger(
     retention=config.log_retention,
     compression=config.log_compression,
 )
+
+zlx_ops_sdk.init("obsidian-clip-api", repo="zj1123581321/obsidian-clip-api", server="n305", environment="prod")
 
 
 _TZ_BEIJING = timezone(timedelta(hours=8))

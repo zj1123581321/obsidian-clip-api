@@ -77,3 +77,4 @@ docker/push_to_acr.bat
 docker/push_to_acr.sh
 docker/pull_and_deploy.sh
 nul
+ops.env
