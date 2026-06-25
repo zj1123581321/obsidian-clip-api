@@ -19,7 +19,7 @@ dependencies = [
     "couchdb>=1.2",
     "loguru>=0.7.2",
     "wecom-notifier>=0.2.0",
-    "zlx-ops-sdk @ git+https://github.com/zj1123581321/zlx-ops-sdk.git@main",
+    "zlx-ops-sdk>=0.1,<0.2",
 ]
 
 [project.optional-dependencies]
@@ -42,6 +42,3 @@ dev = [
     "pytest-asyncio>=0.23.0",
     "httpx>=0.26.0",
 ]
-
-[tool.hatch.metadata]
-allow-direct-references = true
