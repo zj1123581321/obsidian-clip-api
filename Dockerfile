@@ -32,6 +32,11 @@ ENV PYTHONPATH=/app
 ENV TZ=Asia/Shanghai
 ENV REQUESTS_CA_BUNDLE=/etc/ssl/certs/ca-certificates.crt
 
+# release 版本标记：D3 build 注入 --build-arg GIT_SHA，SDK 缺省读取 → GlitchTip release=repo@<sha>
+# 放在源码 COPY 之后（该层每次提交都重建），缓存损失最小
+ARG GIT_SHA=unknown
+ENV GIT_SHA=$GIT_SHA
+
 # 暴露端口
 EXPOSE 8901
 
